@@ -5,13 +5,13 @@ import CheckRoundedIcon from "@mui/icons-material/CheckRounded";
 import { useDispatch, useSelector } from "react-redux";
 import { updateTaskState } from "../lib/store";
 
-type stateType = {
+export type TaskListStateType = {
   tasks: TaskInfoProps[];
   status: string;
-  error: null;
+  error: string | null;
 };
 type taskBoxType = {
-  taskbox: stateType;
+  taskbox: TaskListStateType;
 };
 
 export default function TaskList() {

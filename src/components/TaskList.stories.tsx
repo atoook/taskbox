@@ -1,4 +1,4 @@
-import TaskList, { stateType } from "./TaskList";
+import TaskList, { TaskListStateType } from "./TaskList";
 import * as TaskStories from "./Task.stories";
 
 import { Provider } from "react-redux";
@@ -7,12 +7,12 @@ import { configureStore, createSlice } from "@reduxjs/toolkit";
 import { TaskInfoProps } from "./Task";
 
 type mockStoreType = {
-  taskboxState: stateType;
+  taskboxState: TaskListStateType;
   children: any;
 };
 
 // A super-simple mock of the state of the store
-export const MockedState: stateType = {
+export const MockedState: TaskListStateType = {
   tasks: [
     { ...TaskStories.Default.args.task, id: "1", title: "Task 1" },
     { ...TaskStories.Default.args.task, id: "2", title: "Task 2" },
@@ -58,7 +58,7 @@ export default {
   ],
   tags: ["autodocs"],
   //   excludeStories is a Storybook configuration field
-  //   that prevents our mocked state to be treated as a story
+  //    that prevents our mocked state to be treated as a story
   excludeStories: /.*MockedState$/,
 };
 
