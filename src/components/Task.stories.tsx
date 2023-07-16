@@ -1,4 +1,4 @@
-import { Task } from "./Task";
+import { Task, TaskInfoProps } from "./Task";
 
 export default {
   component: Task,
@@ -12,7 +12,7 @@ export const Default = {
       id: "1",
       title: "Test Task",
       state: "TASK_INBOX",
-    },
+    } as TaskInfoProps,
   },
 };
 
@@ -21,7 +21,7 @@ export const Pinned = {
     task: {
       ...Default.args.task,
       state: "TASK_PINNED",
-    },
+    } as TaskInfoProps,
   },
 };
 
@@ -30,6 +30,6 @@ export const Archived = {
     task: {
       ...Default.args.task,
       state: "TASK_ARCHIVED",
-    },
+    } as TaskInfoProps,
   },
 };

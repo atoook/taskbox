@@ -1,16 +1,13 @@
 import React from "react";
 import StarIcon from "@mui/icons-material/Star";
 
-type TaskInfo = {
+export type TaskInfoProps = {
   id: string;
   title: string;
   state: "TASK_INBOX" | "TASK_PINNED" | "TASK_ARCHIVED";
 };
-type Props = {
-  /**
-   * TBU
-   */
-  task: TaskInfo;
+type TaskProps = {
+  task: TaskInfoProps;
   onArchiveTask: (arg: string) => void;
   onPinTask: (arg: string) => void;
 };
@@ -19,7 +16,7 @@ export const Task = ({
   task: { id, title, state },
   onArchiveTask,
   onPinTask,
-}: Props) => {
+}: TaskProps) => {
   let starIconStyle: any = undefined;
   let titleCustomStyle: any = "text-stone-800";
   switch (state) {
