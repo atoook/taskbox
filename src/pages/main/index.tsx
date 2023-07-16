@@ -1,4 +1,5 @@
 import { Circle } from "@/components/Circle";
+import { Task } from "@/components/Task";
 
 const MainPage = () => {
   return (
