@@ -1,11 +1,12 @@
 import { Circle } from "@/components/Circle";
-import { Task } from "@/components/Task";
+
+import InboxScreen from "@/components/InboxScreen";
 
 const MainPage = () => {
   return (
     <>
-      <h1>main</h1>
-      <Circle variant="orange"></Circle>
+      <InboxScreen />
+      {/* <Circle variant="orange"></Circle> */}
     </>
   );
 };

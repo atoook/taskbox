@@ -10,7 +10,7 @@ export type TaskListStateType = {
   status: string;
   error: string | null;
 };
-type taskBoxType = {
+export type taskBoxType = {
   taskbox: TaskListStateType;
 };
 

@@ -11,7 +11,7 @@ import { configureStore, createSlice, createAsyncThunk } from '@reduxjs/toolkit'
 type TaskApiProps = TaskInfoProps & {
   completed: boolean;
 }
-
+export type AppDispatch = typeof store.dispatch;
 /*
  * The initial state of our store when the app loads.
  * Usually, you would fetch this from a server. Let's not worry about that now
