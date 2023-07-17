@@ -17,21 +17,26 @@ export const Task = ({
   onArchiveTask,
   onPinTask,
 }: TaskProps) => {
+  let taskBgColor: string = "bg-white";
   let starIconStyle: any = undefined;
-  let titleCustomStyle: any = "text-stone-800";
+  let titleCustomStyle: string = "text-stone-800";
   switch (state) {
     case "TASK_INBOX":
       starIconStyle = "disabled";
       break;
     case "TASK_PINNED":
+      taskBgColor = "bg-indigo-50";
       starIconStyle = "primary";
+      titleCustomStyle += ` ${taskBgColor}`;
       break;
     case "TASK_ARCHIVED":
       titleCustomStyle = "text-stone-400 line-through";
       break;
   }
   return (
-    <div className="text-sm leading-5 flex flex-nowrap items-center h-12 w-full bg-white">
+    <div
+      className={`rounded text-sm leading-5 flex flex-nowrap items-center h-12 w-full ${taskBgColor}`}
+    >
       <label htmlFor="checked" aria-label={`archiveTask-${id}`} className="">
         <input
           type="checkbox"
