@@ -30,7 +30,7 @@ export const Task = ({
       titleCustomStyle += ` ${taskBgColor}`;
       break;
     case "TASK_ARCHIVED":
-      titleCustomStyle = "text-stone-400 line-through";
+      titleCustomStyle = "text-stone-400 line-through bg-red-200";
       break;
   }
   return (
