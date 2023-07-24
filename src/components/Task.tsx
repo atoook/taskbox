@@ -55,7 +55,7 @@ export const Task = ({
           readOnly={true}
           name="title"
           placeholder="Input title"
-          className={`ml-10 ${titleCustomStyle}`}
+          className={`ml-10 bg-red-200 ${titleCustomStyle}`}
         ></input>
       </label>
       {state !== "TASK_ARCHIVED" && (
