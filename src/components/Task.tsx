@@ -48,14 +48,14 @@ export const Task = ({
         ></input>
         <span onClick={() => onArchiveTask(id)}></span>
       </label>
-      <label htmlFor="title" aria-label="title" className="">
+      <label htmlFor="title" aria-label="title" className="w-3/4">
         <input
           type="text"
           value={title}
           readOnly={true}
           name="title"
           placeholder="Input title"
-          className={`ml-10 ${titleCustomStyle}`}
+          className={`ml-10 w-3/4 text-ellipsis ${titleCustomStyle}`}
         ></input>
       </label>
       {state !== "TASK_ARCHIVED" && (
